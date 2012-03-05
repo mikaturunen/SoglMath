@@ -1,15 +1,13 @@
 A Simple header only Math library with some basic funcitonality.
-The aim of the header lib is to be easy to use, just include into your project
-and start using. Modify, use, tinker, play with it.. do what you want with it really :)
+The aim of the header lib is to be easy to use, just include into your project and start using. Modify, use, tinker, play with it.. do what you want with it really :)
 
-The vectors use right-hand coordinate system. Geared towards math/simulation/3D rendering 
-use. Especially coupled with OpenGL.
+The vectors use right-hand coordinate system. Geared towards math/simulation/3D rendering use. Especially coupled with OpenGL.
 
+To run the Unit tests provided in the SoglMathTest project, you need to have UnitTest++ libraries compiled and in place and obviously set the references to them. I did not include the libraries because I am not sure of their licensing and so on.. So I'll leave that to everyone to look for if they are interested.
 
 Currently supports:
 - Vector 2D class and common operations
 - Vector 3D class and common operations
-
 
 
 Future plans: 
@@ -20,8 +18,7 @@ Geometry:
 	- Simple polygons (convex)
 	- Lines 
 	- Planes
+
 	
-	
-It's still very much under work but it'll get there. It's a submodule of a bigger
-project and it gets modified when need for more support or modifications arise. 
+It's still very much under work but it'll get there. It's a submodule of a bigger project and it gets modified when need for more support or modifications arise.
 
