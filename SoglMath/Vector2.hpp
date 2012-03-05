@@ -1,5 +1,6 @@
 #pragma once
 
+#define _USE_MATH_DEFINES
 #include <cmath>
 #include "SoglMathCommon.hpp"
 
@@ -74,33 +75,32 @@ class Vector2 {
             x = y;
             y = -tmp;
         }
+
+		// operator overloads
+		Vector2 operator+( const Vector2 &rhs) {
+			Vector2 v(x + rhs.x,
+					  y + rhs.y);
+			return v;
+		}
+
+		Vector2 operator-(const Vector2 &rhs) {
+			Vector2 v(x - rhs.x,
+					  y - rhs.y);
+			return v;
+		}
+
+		Vector2 operator*(const float &rhs) {
+			Vector2 v(x * rhs,
+					  y * rhs);
+			return v;
+		}
+
+		Vector2 operator/(const float &rhs) {
+			Vector2 v(x / rhs,
+					  y / rhs);
+			return v;
+		}
 };
-
-// operator overloads
-Vector2 operator+(const Vector2 &lhs, const Vector2 &rhs) {
-    Vector2 v(lhs.x + rhs.x,
-              lhs.y + rhs.y);
-    return v;
-}
-
-Vector2 operator-(const Vector2 &lhs, const Vector2 &rhs) {
-    Vector2 v(lhs.x - rhs.x,
-              lhs.y - rhs.y);
-    return v;
-}
-
-Vector2 operator*(const Vector2 &lhs, const float &rhs) {
-    Vector2 v(lhs.x * rhs,
-              lhs.y * rhs);
-    return v;
-}
-
-Vector2 operator/(const Vector2 &lhs, const float &rhs) {
-    Vector2 v(lhs.x / rhs,
-              lhs.y / rhs);
-    return v;
-}
-
 
 }; // namespace sogl
 

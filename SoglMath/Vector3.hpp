@@ -1,6 +1,6 @@
 #pragma once
 
-
+#define _USE_MATH_DEFINES
 #include <cmath>
 #include "SoglMathCommon.hpp"
 
@@ -92,37 +92,40 @@ class Vector3 {
 
             return v;
         }
+
+
+		// operator overloads
+		Vector3 operator+(const Vector3 &rhs) {
+			Vector3 v(x + rhs.x,
+					  y + rhs.y,
+					  z + rhs.z);
+			return v;
+		}
+
+		Vector3 operator-(const Vector3 &rhs) {
+			Vector3 v(x - rhs.x,
+					  y - rhs.y,
+					  z - rhs.z);
+			return v;
+		}
+
+		Vector3 operator*(const float &rhs) {
+			Vector3 v(x * rhs,
+					  y * rhs,
+					  z * rhs);
+			return v;
+		}
+
+		Vector3 operator/(const float &rhs) {
+			Vector3 v(x / rhs,
+					  y / rhs,
+					  z / rhs);
+			return v;
+		}
 };
 
 
-// operator overloads
-Vector3 operator+(const Vector3 &lhs, const Vector3 &rhs) {
-    Vector3 v(lhs.x + rhs.x,
-              lhs.y + rhs.y,
-              lhs.z + rhs.z);
-    return v;
-}
 
-Vector3 operator-(const Vector3 &lhs, const Vector3 &rhs) {
-    Vector3 v(lhs.x - rhs.x,
-              lhs.y - rhs.y,
-              lhs.z - rhs.z);
-    return v;
-}
-
-Vector3 operator*(const Vector3 &lhs, const float &rhs) {
-    Vector3 v(lhs.x * rhs,
-              lhs.y * rhs,
-              lhs.z * rhs);
-    return v;
-}
-
-Vector3 operator/(const Vector3 &lhs, const float &rhs) {
-    Vector3 v(lhs.x / rhs,
-              lhs.y / rhs,
-              lhs.z / rhs);
-    return v;
-}
 
 
 };  // namespace sogl
